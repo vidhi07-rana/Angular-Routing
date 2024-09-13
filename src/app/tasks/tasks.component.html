@@ -1,3 +1,10 @@
+<p>
+  <!-- linked to the page we are curretly on ='./' notation -->
+  <!-- queryParams are used for controlling the ordered of our task -->
+  <a routerLink="./" [queryParams]="{order: order() === 'asc' ? 'desc' : 'asc'  }">
+Sort {{order() === 'asc'  ? 'Descending' : 'Ascending '}}
+  </a>
+</p>
 <ul>
   @for (task of userTasks(); track task.id) {
     <li>
